@@ -1,0 +1,8 @@
+mapboxUrl = 'https://{s}.tiles.mapbox.com/v4/sfport.lal0i749/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2Zwb3J0IiwiYSI6IkY3Y3g3amsifQ.Kgv6mCU6rPC2wzXHveXRNg'
+
+var layer = L.tileLayer(mapboxUrl, {
+    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+});
+
+
+"The projected elevation of floodwaters in the absence of waves resulting from wind or seismic effects. In coastal areas, stillwater elevations are determined when modeling coastal storm surge; the results of overland wave modeling are used in conjunction with the stillwater elevations to develop the coastal Base Flood Elevations. "

@@ -1,0 +1,317 @@
+html { height: 100%; width: 100%}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font: 80% Helvetica Neue, sans-serif;
+}
+.fa { cursor: pointer;
+    cursor: hand;
+}
+
+.inundation-panel {     
+    z-index: 10000;
+    height: 250px;
+    width:200px;
+    position:absolute;
+    top: 60px;
+    left: 50px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.90   ;
+    box-shadow: 0 0 5px black;
+}
+
+#yearpicker {
+    width: 65px;
+}
+
+#scenario-chart-control {
+    margin-left: 5px;
+}
+
+#scenario-chart-control-form {
+    margin-bottom: 5px;
+}
+
+#numeric-chart-control-form {
+    margin-bottom: 5px;
+}
+
+#scenario-label {
+    padding-left: 8px;
+}
+
+#scenario-radios{
+    width: 110px;
+}
+
+.basemap-button {     
+    width:150px;
+}
+
+.inundation-panel-header {     
+    padding-left:10px;
+    padding-top:3px;
+    padding-bottom: 0px;
+}
+
+#map_canvas {
+    width: 100%; height: 100%; 
+}
+#bottomP{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    height: 200px;
+    width: 400px;
+    background-color: white;
+}
+#ghold{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#wdiv{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    width: 365px;
+    height: 290px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.95   ;
+    box-shadow: 0 0 5px black;
+ }
+
+ #numeric_chart_control{
+    margin-left: 5px;
+    padding-top: 3px;
+ }
+
+ .inundated_area{
+    padding-bottom: 5px;
+    padding-left: 5px;
+ }
+
+  #chart_control_input{
+    width: 75px;
+ }
+
+ #infodiv{
+    position:absolute;
+    top: 325px;
+    right: 10px;
+    padding: 5px;
+    width: 365px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.95;
+    box-shadow: 0 0 5px black;
+ }
+  .infodiv {
+    height: 335px;
+ }
+ .infodiv_lower {
+    height: 365px;
+ }
+
+ #predictedyears{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+ }
+ #chart_div{
+    height: 200px; width:100%;
+ }
+
+ .elevation-details {
+    margin-top: 85px;
+    font-size: 80%;
+ }
+
+ .slrpills{
+    position: absolute;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 105px;
+    width: 80px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    z-index: 10;
+ }
+ .slrpill_container{
+    height: 90px;
+    position: absolute;
+    width: 365px;
+    top: 195px;
+ }
+
+ .slrpill_container_lower {
+    top: 245px;
+ }
+
+
+.fa-info-circle{
+        padding-left: 5px
+ }
+ .reg{
+    border: 2px solid white;
+    color: white;
+ }
+ .highlight{
+    border: 2px solid orange;
+    color: orange;
+ }
+ .slrhigh{
+    left: 20px;
+    background-color:#111;
+ }
+ .slrlow{
+    right: 20px;
+    background-color:#888;
+ }
+ .slrmid{
+    right: 142.5px;
+    background-color:#444;
+ }
+ .joiner{
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    top: 20px;
+    height: 70px;
+    background-color: #B0C5E4
+ }
+ .slrinfo{
+    position: absolute;
+    background-color: #EEE;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    height: 100px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-align: center;
+ }
+ .vsplit{
+    width: 100%;
+    height: 50%;
+    vertical-align: middle;
+    padding: 10px;
+ }
+ .hsplit{
+    width: 45%;
+    height: 35px;
+    text-align: center;
+ }
+  .inundation-details{
+    padding-top:3px;
+ }
+ .fleft{
+    float: left;
+    border-right-style:solid;
+    border-right-color:gray;
+    text-align: right;
+    width: 45%;
+    padding-right: 15px;
+ }
+ .fright{
+    float: right;
+ }
+ .xsdiv{
+    position:absolute;
+    top: 10px;
+    right: 410px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.95   ;
+    box-shadow: 0 0 5px black;
+ }
+
+
+ .big{
+    height: 200px;
+    width: 500px;
+ }
+ .small{
+    height: 50px;
+    width: 60px;
+ }
+ #togglebtn{
+    position: absolute;
+    top: 565px;
+    right: 10px;
+ }
+ .print{
+    position:absolute;
+    top: 115px;
+    left: 10px;
+    padding: 6px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.95   ;
+    box-shadow: 0 0 5px black;
+ }
+ #animbutton{
+    position: absolute;
+    top: 10px;
+    left: 60px;
+ }
+ .yeartitle{
+    position: absolute;
+    top: 135px;
+    right: 20px;
+    left: 20px;
+    height: 40px;
+    padding: 10px 10px;
+    text-align: center;
+
+ }
+ #closexs{
+    position: absolute;
+    top: 15px;
+    right: 415px
+ }
+.bigtitle{
+    position: absolute;
+    text-shadow: 0 0 5px black;
+    text-shadow: 0 0 10px black;
+    color: white;
+    left: 15px;
+    bottom: 5px;
+}
+.inwrap{
+    padding: 3px;
+    background-color: white;
+    border-radius: 3px;
+    text-shadow: 0 0 5px white;
+    color: black
+}
+.hovertip{
+position: absolute;
+background-color:rgba(0,0,0,0.75);
+color: white;
+z-index: 555;
+max-width: 100px;
+padding: 3px;
+font-size: x-small;
+border-radius: 3px;
+}
+
+.hidden {
+    display: none;
+}
