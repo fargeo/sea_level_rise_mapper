@@ -195,7 +195,7 @@ $(document).ready(function(){
             datarr1 = [["YEAR","Low GG Scenario","Mid GG Scenario","High GG Scenario","Current Level"]];
             sty = 2010;
 
-            $.getJSON("slr_coeff.json", function(dload){
+            $.getJSON("slr_coeff.js", function(dload){
                 slrscen = dload;
                 
                 for(i=dload.INFO.MIN;i<dload.INFO.MAX+1;i++){
