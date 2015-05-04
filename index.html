@@ -53,18 +53,27 @@
 	<div id="infodiv" class="infodiv">
 		<div id="predictedyears">
 			<div class="slrinfo">
-				<div class="hsplit fleft" id="elevVal"></div>
-				<div class="hsplit fright">
-				<p align="left">Elevation of Depicted Inundation</p>
-				</div>
-				<div class="hsplit fleft" id="inundated_area_value"></div>
-				<div class="hsplit fright inundation-details">
-					<p align="left">Area of Depicted Inundation</p>
-				</div>
-			<div class="elevation-details">
+				<table class="slrinfo-table">
+					<tr>
+						<td id="elevVal" class="report-value"></td>
+						<td class="report-key">Elevation of Depicted Inundation</td>
+					</tr>
+					<tr>
+						<td id="inundated_area_value" class="report-value"></td>
+						<td class="report-key">Area of Depicted Inundation</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						</td>
+					</tr>
+					<caption align="bottom" class="elevation-details"><b>Elevation Source:</b> NADV88 and some other details</caption>
+				</table>
+
+				
+			</div>
+<!-- 			<div class="elevation-details">
 				<p><b>Elevation Source:</b> NADV88 and some other details</p>
-			</div>
-			</div>
+			</div> -->
 			<div class="yeartitle">	
 				<p><b>Year of Inundation at</br>100-year Still Water Level Scenarios</b><i class="fa fa-info-circle"></i></p>
 				<p class="hidden" id='scenario-definitions'>Some details about the projected elevation of floodwaters in the absence of waves predicted to be exceeded once every 100 years.</p>

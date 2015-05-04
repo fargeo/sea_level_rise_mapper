@@ -26,7 +26,7 @@ body {
 }
 
 #yearpicker {
-    width: 65px;
+    width: 80px;
 }
 
 #scenario-chart-control {
@@ -46,7 +46,7 @@ body {
 }
 
 #scenario-radios{
-    width: 110px;
+    width: 125px;
 }
 
 .basemap-button {     
@@ -129,16 +129,42 @@ body {
     height: 100%;
 
  }
+
  #chart_div{
-    height: 200px; width:100%;
+    height: 200px; 
+    width:100%;
  }
 
  .elevation-details {
-    margin-top: 85px;
+    padding-top: 5px;
     font-size: 80%;
  }
 
- .slrpills{
+.slrinfo_table { 
+    border: none; 
+    border-collapse: collapse;
+    /*margin-bottom: 5px*/
+}
+
+.report-value { 
+    text-align: right;
+    margin-bottom: 5px
+}
+
+.report-key {
+    text-align: left;
+}
+
+table td { 
+    border-left: 2px solid #ccc;
+    padding: 7px 7px 7px 7px;
+}
+
+table td:first-child { 
+    border-left: none;
+}
+
+.slrpills{
     position: absolute;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -149,7 +175,8 @@ body {
     padding: 5px;
     z-index: 10;
  }
- .slrpill_container{
+
+.slrpill_container{
     height: 90px;
     position: absolute;
     width: 365px;
@@ -184,14 +211,7 @@ body {
     right: 142.5px;
     background-color:#444;
  }
- .joiner{
-    position: absolute;
-    right: 30px;
-    left: 30px;
-    top: 20px;
-    height: 70px;
-    background-color: #B0C5E4
- }
+
  .slrinfo{
     position: absolute;
     background-color: #EEE;
@@ -202,33 +222,26 @@ body {
     -moz-border-radius: 5px;
     border-radius: 5px;
     padding: 10px 10px;
-    text-align: center;
+    text-align: right;
  }
+
  .vsplit{
     width: 100%;
     height: 50%;
     vertical-align: middle;
     padding: 10px;
  }
+
  .hsplit{
     width: 45%;
     height: 35px;
     text-align: center;
  }
+
   .inundation-details{
     padding-top:3px;
  }
- .fleft{
-    float: left;
-    border-right-style:solid;
-    border-right-color:gray;
-    text-align: right;
-    width: 45%;
-    padding-right: 15px;
- }
- .fright{
-    float: right;
- }
+
  .xsdiv{
     position:absolute;
     top: 10px;
@@ -255,6 +268,7 @@ body {
     top: 565px;
     right: 10px;
  }
+
  .print{
     position:absolute;
     top: 115px;
@@ -266,6 +280,7 @@ body {
     opacity: 0.95   ;
     box-shadow: 0 0 5px black;
  }
+
  #animbutton{
     position: absolute;
     top: 10px;

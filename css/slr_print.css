@@ -1,61 +1,6 @@
-html { height: 100%; width: 100%}
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font: 80% Helvetica Neue, sans-serif;
-}
-.fa { cursor: pointer;
-    cursor: hand;
-}
-
-#yearpicker {
-    width: 65px;
-}
-
-#scenario-chart-control {
-    margin-left: 5px;
-}
-
-#scenario-chart-control-form {
-    margin-bottom: 5px;
-}
-
-#numeric-chart-control-form {
-    margin-bottom: 5px;
-}
-
-#scenario-label {
-    padding-left: 8px;
-}
-
-#scenario-radios{
-    width: 110px;
-}
-
-.basemap-button {     
-    width:150px;
-}
-
 #map_canvas {
     width: 50% !important; 
     height: 100%; 
-}
-
-#bottomP{
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    height: 200px;
-    width: 400px;
-    background-color: white;
-}
-
-#ghold{
-    position: relative;
-    width: 100%;
-    height: 100%;
 }
 
 #wdiv{
@@ -68,96 +13,30 @@ body {
     background-color: blue;
  }
 
- #numeric_chart_control{
-    margin-left: 5px;
-    padding-top: 3px;
- }
-
- .inundated_area{
-    padding-bottom: 5px;
-    padding-left: 5px;
- }
-
-  #chart_control_input{
-    width: 75px;
- }
-
  #infodiv{
     position:absolute;
-    top: 325px;
+    top: 290px;
     right: 0px;
     padding: 5px;
     width: 43%;
     background-color: white;
  }
+
   .infodiv {
     height: 320px;
  }
+
  .infodiv_lower {
     height: 350px;
  }
 
- #predictedyears{
-    position: relative;
-    width: 100%;
-    height: 100%;
-
- }
- #chart_div{
-    height: 200px; 
-    width:100%;
- }
 
  .elevation-details {
-    margin-top: 85px;
+    padding-top: 5px;
+    padding-bottom: 10px;
     font-size: 80%;
  }
 
- .slrpills{
-    position: absolute;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    height: 105px;
-    width: 80px;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    z-index: 10;
- }
- .slrpill_container{
-    height: 90px;
-    position: absolute;
-    width: 365px;
-    top: 195px;
- }
-
- .slrpill_container_lower {
-    top: 245px;
- }
-
-.fa-info-circle{
-        padding-left: 5px
- }
- .reg{
-    border: 2px solid white;
-    color: white;
- }
- .highlight{
-    border: 2px solid orange;
-    color: orange;
- }
- .slrhigh{
-    left: 20px;
-    background-color:#111;
- }
- .slrlow{
-    right: 20px;
-    background-color:#888;
- }
- .slrmid{
-    right: 142.5px;
-    background-color:#444;
- }
  .joiner{
     position: absolute;
     right: 30px;
@@ -178,33 +57,12 @@ body {
     padding: 10px 10px;
     text-align: center;
  }
- .vsplit{
-    width: 100%;
-    height: 50%;
-    vertical-align: middle;
-    padding: 10px;
- }
+
  .hsplit{
     width: 45%;
     height: 35px;
     text-align: center;
  }
-  .inundation-details{
-    padding-top:3px;
- }
- .fleft{
-    float: left;
-    border-right-style:solid;
-    border-right-color:gray;
-    text-align: right;
-    width: 60px;
-    padding-right: 15px;
- }
- .fright{
-    float: right;
-    width: 60px;
- }
-
 
  .big{
     height: 200px;
@@ -228,6 +86,19 @@ body {
     top: 10px;
     left: 50px;
     padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.95   ;
+    box-shadow: 0 0 5px black;
+    visibility: hidden;
+ }
+
+ .print{
+    position:absolute;
+    top: 115px;
+    left: 10px;
+    padding: 6px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     background-color: white;

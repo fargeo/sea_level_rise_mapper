@@ -55,8 +55,8 @@ $(document).ready(function(){
             loadZoom = 14;
             percentage = 0.001;
         }
-        $("#elevVal").html("<h4>"+Math.round(filtVal*100)/100+" ft.</h4>")
-        $("#inundated_area_value").html("<h4>"+Math.round(percentage*100)/100+" sq mi</h4>")
+        $("#elevVal").html("<b>"+Math.round(filtVal*100)/100+" ft</b>")
+        $("#inundated_area_value").html("<b>"+Math.round(percentage*100)/100+" mi<sup>2</sup></b>")
         $('#chart_control_input').val(Math.round(filtVal * 10) / 10)
         var XSARR;
         var dataXS;
@@ -509,11 +509,11 @@ $(document).ready(function(){
                 }
                 catch(err){
                 }
-                $("#elevVal").html("<h4>" + Math.round(filtval*100)/100 + " ft.</h4>").fadeIn();
+                $("#elevVal").html("<b>" + Math.round(filtval*100)/100 + " ft.</b>").fadeIn();
 
             });
         percentage = (inundationPixelCount / (dryPixelCount+inundationPixelCount)) * 100
-        $("#inundated_area_value").html("<h4>" + Math.round(percentage * 13.563)/100 + " sq mi </h4>").fadeIn()
+        $("#inundated_area_value").html("<b>" + Math.round(percentage * 13.563)/100 + " mi<sup>2</sup></b>").fadeIn()
         hVal = "#"+""+map.getCenter().toString().replace("LatLng(","").replace(")","").replace(", ","/")+"/"+map.getZoom()+"/"+filtVal+"/"+percentage;
         history.pushState(null,null,hVal);
         }
