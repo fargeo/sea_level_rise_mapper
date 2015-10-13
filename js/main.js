@@ -57,11 +57,20 @@ $(document).ready(function(){
         }
         $("#elevVal").html("<b>"+Math.round(filtVal*100)/100+" ft</b>")
         $("#inundated_area_value").html("<b>"+Math.round(percentage*100)/100+" mi<sup>2</sup></b>")
-        $('#chart_control_input').val(Math.round(filtVal * 10) / 10)
         var XSARR;
         var dataXS;
         var XSoptions;
         var chartXS;
+
+        var chartControlInput = $('#chart_control_input')
+        chartControlInput.val(Math.round(filtVal * 10) / 10)
+        
+        var keepInSync = function() {
+            $('.inundation_level').html($(chartControlInput).val())
+        };
+
+        chartControlInput.on('change', keepInSync)
+        keepInSync()
 
         function drawXS(addData) {
 

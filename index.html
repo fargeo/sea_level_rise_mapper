@@ -31,7 +31,7 @@
 		<div id="numeric_chart_control">
 			<form id="numeric-chart-control-form" class="form-inline">
 				<label> Water Level:
-					<input id="chart_control_input" type="number" step="0.1" min=0 value=12.58></input>
+					<input id= "chart_control_input" type="number" step="0.1" min=0 value=12.58></input>
 				</label>
 			</form>
 		</div>
@@ -75,7 +75,7 @@
 				<p><b>Elevation Source:</b> NADV88 and some other details</p>
 			</div> -->
 			<div class="yeartitle">	
-				<p><b>Year of Inundation at</br>100-year Still Water Level Scenarios</b><i class="fa fa-info-circle"></i></p>
+				<p><b>Year of Inundation at<br>100-year Still Water Level Scenarios</b><i class="fa fa-info-circle"></i></p>
 				<p class="hidden" id='scenario-definitions'>Some details about the projected elevation of floodwaters in the absence of waves predicted to be exceeded once every 100 years.</p>
 			</div>
 			<div class='slrpill_container'>
@@ -102,6 +102,13 @@
 				</div>
 				<div class="joiner"></div>
 			</div>
+		</div>
+	</div>
+	<div style="visibility:hidden;">
+		<div id="numeric-chart-control-form" class="form-inline">
+			<label id="inundationdiv" class="inundationdiv"> Feet of Inundation:
+				<span class="inundation_level"></span>
+			</label>
 		</div>
 	</div>
 
