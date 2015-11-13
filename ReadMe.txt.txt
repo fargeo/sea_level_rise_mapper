@@ -1,0 +1,2 @@
+Elevation data from zoom levels 15-18 is not inlcuded in the repository due to repository size considerations. 
+If you have moved or cloned this repository you must manually move the additional zoom level data.
