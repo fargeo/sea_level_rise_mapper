@@ -65,12 +65,20 @@ $(document).ready(function(){
         var chartControlInput = $('#chart_control_input')
         chartControlInput.val(Math.round(filtVal * 10) / 10)
         
-        var keepInSync = function() {
+        var keepWaterLevelInSync = function() {
             $('.inundation_level').html($(chartControlInput).val())
         };
+        chartControlInput.on('change', keepWaterLevelInSync)
+        keepWaterLevelInSync()
 
-        chartControlInput.on('change', keepInSync)
-        keepInSync()
+
+        var commentsInput = $('#comments-input')
+        var keepCommentsInSync = function() {
+            $('.comments_section').html($(commentsInput).val().replace(/\n/g, '<br />'))
+        };
+        commentsInput.on('change', keepCommentsInSync)
+        keepCommentsInSync()
+
 
         function drawXS(addData) {
 
@@ -163,88 +171,97 @@ $(document).ready(function(){
             
             filtTiles(filtval);
                     
-            chart.draw(data, options);
-            if (chartXS != undefined){
-                chartXS.draw(dataXS, XSoptions);
-            }
+            // chart.draw(data, options);
+            // if (chartXS != undefined){
+            //     chartXS.draw(dataXS, XSoptions);
+            // }
                     
-            predYears = {}
-            predYears.LOW = Math.round(((-1*slrscen.LOW.B)+Math.sqrt((slrscen.LOW.B*slrscen.LOW.B)-4*slrscen.LOW.A*(slrscen.LOW.C-filtval)))/(2*slrscen.LOW.A));
-            predYears.MID = Math.round(((-1*slrscen.MID.B)+Math.sqrt((slrscen.MID.B*slrscen.MID.B)-4*slrscen.MID.A*(slrscen.MID.C-filtval)))/(2*slrscen.MID.A));
-            predYears.HIGH = Math.round(((-1*slrscen.HIGH.B)+Math.sqrt((slrscen.HIGH.B*slrscen.HIGH.B)-4*slrscen.HIGH.A*(slrscen.HIGH.C-filtval)))/(2*slrscen.HIGH.A));
+            // predYears = {}
+            // predYears.LOW = Math.round(((-1*slrscen.LOW.B)+Math.sqrt((slrscen.LOW.B*slrscen.LOW.B)-4*slrscen.LOW.A*(slrscen.LOW.C-filtval)))/(2*slrscen.LOW.A));
+            // predYears.MID = Math.round(((-1*slrscen.MID.B)+Math.sqrt((slrscen.MID.B*slrscen.MID.B)-4*slrscen.MID.A*(slrscen.MID.C-filtval)))/(2*slrscen.MID.A));
+            // predYears.HIGH = Math.round(((-1*slrscen.HIGH.B)+Math.sqrt((slrscen.HIGH.B*slrscen.HIGH.B)-4*slrscen.HIGH.A*(slrscen.HIGH.C-filtval)))/(2*slrscen.HIGH.A));
             
-            for (i in predYears){
+            // for (i in predYears){
             
-                if (isNaN(predYears[i]) == true || predYears[i]<slrscen.INFO.MIN){
-                    predYears[i] = "-"
-                }
-                else if (predYears[i]>slrscen.INFO.MAX){
-                    predYears[i] = "2150+"
-                }
+            //     if (isNaN(predYears[i]) == true || predYears[i]<slrscen.INFO.MIN){
+            //         predYears[i] = "-"
+            //     }
+            //     else if (predYears[i]>slrscen.INFO.MAX){
+            //         predYears[i] = "2150+"
+            //     }
 
-            }
+            // }
             
-            $("#highscenario").html("<h4>" + predYears.HIGH + "</h4>");
-            $("#midscenario").html("<h4>" + predYears.MID + "</h4>");
-            $("#lowscenario").html("<h4>" + predYears.LOW + "</h4>");
-            scenario = $('option[name=scenario-radios]:selected').val()
-            if (predYears[scenario] === "2150+") {
-                $('#yearpicker').val(slrscen.INFO.MAX)
-            } else if (predYears[scenario] === "-") {
-                $('#yearpicker').val(slrscen.INFO.MIN)
-            } else {
-                $('#yearpicker').val(predYears[scenario])
-            }
-            flashElement(".slrpills");
+            // $("#highscenario").html("<h4>" + predYears.HIGH + "</h4>");
+            // $("#midscenario").html("<h4>" + predYears.MID + "</h4>");
+            // $("#lowscenario").html("<h4>" + predYears.LOW + "</h4>");
+            // scenario = $('option[name=scenario-radios]:selected').val()
+            // if (predYears[scenario] === "2150+") {
+            //     $('#yearpicker').val(slrscen.INFO.MAX)
+            // } else if (predYears[scenario] === "-") {
+            //     $('#yearpicker').val(slrscen.INFO.MIN)
+            // } else {
+            //     $('#yearpicker').val(predYears[scenario])
+            // }
+            // flashElement(".slrpills");
 
         }
 
-        function drawChart() {
+        // function drawChart() {
         
+        //     datarr1 = [["YEAR","Low GG Scenario","Mid GG Scenario","High GG Scenario","Current Level"]];
+        //     sty = 2010;
+
+        //     $.getJSON("slr_coeff.js", function(dload){
+        //         slrscen = dload;
+                
+        //         for(i=dload.INFO.MIN;i<dload.INFO.MAX+1;i++){
+        //             lowval = dload.LOW.A*(i*i)+dload.LOW.B*i+dload.LOW.C;
+        //             midval = dload.MID.A*(i*i)+dload.MID.B*i+dload.MID.C;
+        //             highval = dload.HIGH.A*(i*i)+dload.HIGH.B*i+dload.HIGH.C;
+        //             datarr1.push([i,lowval,midval,highval,filtVal]);
+        //         }
+                
+        //         data = google.visualization.arrayToDataTable(datarr1);
+
+        //         options = {
+        //             titleTextStyle: {fontSize: 14},
+        //             seriesType: "lines",
+        //             series: {3: {type: "area",lineWidth:0,visibleInLegend:false}},
+        //             colors: ["#888","#444", "#111", "#04A"],
+        //             enableInteractivity: false,
+        //             legend:{position:"top"},
+        //             animation: {duration:300,easing:"out"},
+        //             chartArea:{left:"5%",top:"15%",width:"90%",height:"75%"},
+        //             hAxis:{
+        //                 format: "####",
+        //                 gridlines: {count:10}
+        //             }
+        //         };
+
+        //         chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        //         chart.draw(data, options);
+        //         google.visualization.events.addListener(chart, 'click', function(e){clickPath(e)});
+        //         $('#chart_control_input, #yearpicker, #scenario-radios').on('change', function(e) {
+        //             clickPath(e);
+        //         });
+        //     });
+        //  }
+
+        var mbTiles = new L.tileLayer("http://tiles-archesapp.rhcloud.com/sf_ft/map/{z}/{x}/{y}.png", {
+            tms: false,
+            opacity: 1,
+            zIndex: -999
+        });
+        
+        function updateMapFromInput() {
+            
             datarr1 = [["YEAR","Low GG Scenario","Mid GG Scenario","High GG Scenario","Current Level"]];
-            sty = 2010;
 
-            $.getJSON("slr_coeff.js", function(dload){
-                slrscen = dload;
-                
-                for(i=dload.INFO.MIN;i<dload.INFO.MAX+1;i++){
-                    lowval = dload.LOW.A*(i*i)+dload.LOW.B*i+dload.LOW.C;
-                    midval = dload.MID.A*(i*i)+dload.MID.B*i+dload.MID.C;
-                    highval = dload.HIGH.A*(i*i)+dload.HIGH.B*i+dload.HIGH.C;
-                    datarr1.push([i,lowval,midval,highval,filtVal]);
-                }
-                
-                data = google.visualization.arrayToDataTable(datarr1);
-
-                options = {
-                    titleTextStyle: {fontSize: 14},
-                    seriesType: "lines",
-                    series: {3: {type: "area",lineWidth:0,visibleInLegend:false}},
-                    colors: ["#888","#444", "#111", "#04A"],
-                    enableInteractivity: false,
-                    legend:{position:"top"},
-                    animation: {duration:300,easing:"out"},
-                    chartArea:{left:"5%",top:"15%",width:"90%",height:"75%"},
-                    hAxis:{
-                        format: "####",
-                        gridlines: {count:10}
-                    }
-                };
-
-                chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
-                google.visualization.events.addListener(chart, 'click', function(e){clickPath(e)});
-                $('#chart_control_input, #yearpicker, #scenario-radios').on('change', function(e) {
+            $('#chart_control_input').on('change', function(e) {
                     clickPath(e);
-                });
             });
-         }
-
-        // var mbTiles = new L.tileLayer("http://tiles-archesapp.rhcloud.com/sf_ft/map/{z}/{x}/{y}.png", {
-        //     tms: false,
-        //     opacity: 1,
-        //     zIndex: -999
-        // });
+        }
 
         var mbTiles = new L.tileLayer("SF_FT/{z}/{x}/{y}.png", {
             tms: false,
@@ -309,7 +326,7 @@ $(document).ready(function(){
             a = latLng2tile(e.latlng.lat,e.latlng.lng, map.getZoom());
             filtval = tilarr.data[a.tileCall][a.arrInd];
             filtTiles(filtval);
-            $('#chart_control_input').val(Math.round(filtval * 10) / 10)
+            chartControlInput.val(Math.round(filtval * 10) / 10)
             clickPath(true);
             
         };
@@ -528,6 +545,7 @@ $(document).ready(function(){
         }
 
         tiles.addTo(map);
-        drawChart(); 
+        // drawChart(); 
+        updateMapFromInput();
 
  });

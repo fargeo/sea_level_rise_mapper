@@ -38,7 +38,8 @@ body {
 }
 
 #numeric-chart-control-form {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    padding-top: 5px;
 }
 
 #scenario-label {
@@ -82,7 +83,7 @@ body {
     right: 10px;
     padding: 5px;
     width: 365px;
-    height: 290px;
+    height: 200px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     background-color: white;
@@ -91,8 +92,8 @@ body {
  }
 
  #numeric_chart_control{
-    margin-left: 5px;
-    padding-top: 3px;
+    margin-left: 20px;
+    padding-top: 10px;
  }
 
  .inundated_area{
@@ -104,9 +105,16 @@ body {
     width: 75px;
  }
 
- #infodiv{
+ #comments-input{
+    width: 350px;
+    height: 210px;
+    text-align: left;
+    resize: none;
+ }
+
+ #commentsdiv{
     position:absolute;
-    top: 325px;
+    top: 235px;
     right: 10px;
     padding: 5px;
     width: 365px;
@@ -116,17 +124,24 @@ body {
     opacity: 0.95;
     box-shadow: 0 0 5px black;
  }
-  .infodiv {
-    height: 335px;
+  .commentsdiv {
+    height: 250px;
  }
  .infodiv_lower {
     height: 365px;
  }
 
+ #comments-section {
+    margin: 0px 0px 10px; 
+    width: 352px; 
+    height: 149px;
+    text-align: left;
+ }
+
  #predictedyears{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 75%;
 
  }
 
@@ -221,7 +236,7 @@ table td:first-child {
     height: 100px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 5px 10px;
     text-align: right;
  }
 

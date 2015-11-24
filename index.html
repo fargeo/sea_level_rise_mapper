@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div id="map_canvas"><div class="hovertip"></div></div>
-	<div class="bigtitle"><h1>Canvas-Based SLR Mapping tool</h1><h5>BETA | Click on map or Water Level Chart (top right) to model inundation for that elevation</h5></div>
+	<div class="bigtitle"><h1>SLR Mapping tool</h1><h5>Click on map or enter water level (top right) to model inundation</h5></div>
 	<div class="xsdiv small">
 		<button class="btn">Draw XS</button>
 	</div>
@@ -27,30 +27,14 @@
 	</div>
 	<button id="closexs" class="btn">Reset/Close</button>
 	<div id="wdiv">
-		<div id="chart_div"></div>
+		<!-- <div id="chart_div"></div> -->
 		<div id="numeric_chart_control">
 			<form id="numeric-chart-control-form" class="form-inline">
 				<label> Water Level:
-					<input id= "chart_control_input" type="number" step="0.1" min=0 value=12.58></input>
+					<input id= "chart_control_input" type="number" step="0.1" min=0 value=12.58>
 				</label>
 			</form>
 		</div>
-		<div id="scenario-chart-control">
-			<form id='scenario-chart-control-form' class="form-inline">
-				<label> Year:
-					<select name="yearpicker" id="yearpicker"></select>
-				</label>
-				<label id='scenario-label'> Scenario:
-					<select id="scenario-radios" name="scenario-radios">
-					  <option name="scenario-radios" value="LOW">LOW</option>
-					  <option name="scenario-radios" value="MID">MID</option>
-					  <option name="scenario-radios" value="HIGH">HIGH</option>
-					</select>
-				</label>
-			</form>
-		</div>
-	</div>
-	<div id="infodiv" class="infodiv">
 		<div id="predictedyears">
 			<div class="slrinfo">
 				<table class="slrinfo-table">
@@ -68,42 +52,13 @@
 					</tr>
 					<caption align="bottom" class="elevation-details"><b>Elevation Source:</b> NADV88 and some other details</caption>
 				</table>
-
-				
-			</div>
-<!-- 			<div class="elevation-details">
-				<p><b>Elevation Source:</b> NADV88 and some other details</p>
-			</div> -->
-			<div class="yeartitle">	
-				<p><b>Year of Inundation at<br>100-year Still Water Level Scenarios</b><i class="fa fa-info-circle"></i></p>
-				<p class="hidden" id='scenario-definitions'>Some details about the projected elevation of floodwaters in the absence of waves predicted to be exceeded once every 100 years.</p>
-			</div>
-			<div class='slrpill_container'>
-				<div class="slrpills slrhigh reg">
-					<h5>HIGH</h5>
-					<hr/>
-					<div id="highscenario">
-						<h4>-</h4>
-					</div>
-				</div>
-				<div class="slrpills slrmid reg">
-					<h5>MID</h5>
-					<hr/>
-					<div id="midscenario">
-						<h4>-</h4>
-					</div>
-				</div>
-				<div class="slrpills slrlow reg">
-					<h5>LOW</h5>
-					<hr/>
-						<div id="lowscenario">
-							<h4>-</h4>
-						</div>
-				</div>
-				<div class="joiner"></div>
 			</div>
 		</div>
 	</div>
+		<div id="commentsdiv" class="commentsdiv">
+			<label style="padding-left: 10px;">Annotations:</label>
+			<textarea id="comments-input" class="report-value"></textarea>
+		</div>
 	<div style="visibility:hidden;">
 		<div id="numeric-chart-control-form" class="form-inline">
 			<label id="inundationdiv" class="inundationdiv"> Feet of Inundation:
@@ -111,7 +66,13 @@
 			</label>
 		</div>
 	</div>
-
+	<div style="visibility:hidden;">
+		<div id="comments" class="comments-input">
+			<label id="comments_div" class="comments_div">
+				<span class="comments_section"></span>
+			</label>
+		</div>
+	</div>
 </body>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>

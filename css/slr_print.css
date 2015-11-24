@@ -14,38 +14,43 @@
     visibility: hidden;
  }
 
- #infodiv{
-    position:absolute;
-    top: 290px;
-    right: 0px;
-    padding: 5px;
-    width: 43%;
-    background-color: white;
+  #comments_section{
+    width: 350px;
+    height: 210px;
+    background-color: white !important;
+ }
+
+ #commentsdiv{
     visibility: hidden;
  }
 
-  #inundationdiv{
+
+  #comments_div{
     visibility: visible;
     position:absolute;
-    top: 20px;
+    top: 135px;
     right: 20px;
     padding: 5px;
     background-color: white !important;
     border-radius:5px;
+    display: block !important;
  }
 
-  .infodiv {
-    height: 320px;
+  #predictedyears{
+    visibility: visible;
+    position:absolute;
+    top: 0px;
+    right: 20px;
+    padding: 0px;
+    background-color: white !important;
+    border-radius:5px;
+    width: 330px;
+    height: 105px;
  }
-
- .infodiv_lower {
-    height: 350px;
- }
-
 
  .elevation-details {
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
     font-size: 80%;
  }
 
@@ -58,15 +63,16 @@
     background-color: #B0C5E4
  }
  .slrinfo{
+    visibility: visible;
     position: absolute;
     background-color: #EEE;
-    top: 20px;
-    right: 20px;
-    left: 20px;
+    top: 0px;
+    right: 10px;
+    left: 10px;
     height: 100px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 5px 10px 5px 0px;
     text-align: center;
  }
 
