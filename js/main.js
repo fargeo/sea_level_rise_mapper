@@ -350,6 +350,13 @@ $(document).ready(function(){
                     $(".hovertip").css("top",e.containerPoint.y-30);
                     $(".hovertip").css("left",e.containerPoint.x+20);
                 }
+                else {
+                    movecount = 0;
+                    $(".hovertip").show();
+                    $(".hovertip").html('No elevation data');
+                    $(".hovertip").css("top",e.containerPoint.y-30);
+                    $(".hovertip").css("left",e.containerPoint.x+20);
+                }
             }
             movecount+=1
 
